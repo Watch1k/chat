@@ -1,0 +1,156 @@
+if !footerOff
+	if footerSub
+		+b.FOOTER.footer_sub#footer
+			+e.mobile-top.js-to-top
+				+i('mobile-top')
+
+			+e.round-sub-top
+				.
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 280">
+					<path d="M1280,0H0c0,0,319.8,66.7,639.7,66.7C959.8,66.7,1280,0,1280,0z"/>
+					</svg>
+
+			+e.container.container
+				+e.bot
+					+e.bot-logo(href='#!')
+						+e.bot-logo-img(src='static/img/logo.svg' alt='image')
+					+e.bot-right
+						-navList = ['Преимущества', 'Как это работает', 'Сферы деятельности', 'Как создаем', 'Кейсы', 'Блог', 'Контакты']
+						+e.NAV.bot-nav
+							ul
+								each el in navList
+									li: a(href='#!')= el
+
+				+e.P.copy Copyright  2018 Unibot. All rights reserved.
+				+e.load
+					+e.load-link(href='#!') Условия использования
+					+e.load-link(href='#!') Политика конфиденциальности
+
+	else if footerContacts
+		+b.FOOTER.footer_contacts#footer
+			+e.mobile-top.js-to-top
+				+i('mobile-top')
+
+			+e.round-contacts-top
+				.
+					<svg xmlns="http://www.w3.org/2000/svg"viewBox="0 0 1280 76.6">
+					<path d="M0,0c0,0,391.7,76.6,789.7,76.6c248,0,490.3-66.6,490.3-66.6V0H0z"/>
+					</svg>
+
+
+			+e.callback
+				+e.callback-logo
+					img(src='static/img/logo-footer.png' alt='image')
+
+				+e.callback-content
+					+e.callback-container.container_md
+						+e.H3.callback-title Обратная связь
+
+						+b.FORM.form_contacts.__callback-form(action='#')
+							+e.row_half
+								+e.row
+									+e.row_item.has-error
+										+e.INPUT.input_text(type='text' placeholder='Имя')
+										.help-block Ошибочка однако
+									+e.row_item
+										+e.INPUT.input_text(type='tel' placeholder='Телефон')
+										.help-block Ошибочка однако
+									+e.row_item
+										+e.INPUT.input_text(type='email' placeholder='E-mail')
+										.help-block Ошибочка однако
+								+e.row
+									+e.row_item._full-height
+										+e.TEXTAREA.textarea(placeholder='Комментарий')
+										.help-block Ошибочка однако
+							+e.row_simple
+								-btnClass = '_default __submit'
+								-btnText = 'Отправить'
+								-btnRemoveHref = true
+								-btnTag = 'button'
+								-
+									attributes = {
+										type: 'submit'
+									}
+								include ../components/btn
+				+e.callback-content-show
+					+e.container.container_md
+						p Спасибо!
+
+			+e.container.container
+				+e.bot
+					+e.bot-logo(href='#!')
+						+e.bot-logo-img(src='static/img/logo.svg' alt='image')
+					+e.bot-right
+						-navList = ['Преимущества', 'Как это работает', 'Сферы деятельности', 'Как создаем', 'Кейсы', 'Блог', 'Контакты']
+						+e.NAV.bot-nav
+							ul
+								each el in navList
+									li: a(href='#!')= el
+
+				+e.P.copy Copyright  2018 Unibot. All rights reserved.
+				+e.load
+					+e.load-link(href='#!') Условия использования
+					+e.load-link(href='#!') Политика конфиденциальности
+
+	else
+		+b.FOOTER.footer#footer(data-scroll-section)
+			div(data-line)
+
+			+e.map-image
+				img(src='static/img/footer-map.png' alt='image')
+
+			+e.mobile-top.js-to-top
+				+i('mobile-top')
+
+			+e.round-top
+				.
+					<svg viewBox="0 0 1282 81">
+					<path d="M0,81h641.4C320.9,81,0,0,0,0V81z"/>
+					<path d="M1282,0c0,0-319.6,81-639.6,81H1282v-81H1282z"/>
+					</svg>
+
+			+e.container.container
+				+e.title Контакты
+
+				+e.list
+					+e.list-col
+						+e.list-phone.__list-text
+							p Телефон:
+							a(href='tel: +380999318500') +38 (099)-931-85-00
+						+e.list-mail.__list-text
+							p Почта:
+							a(href='mailto: info@unibot.a') info@unibot.a
+					+e.list-col
+						+e.list-address.__list-text
+							p 05624, Украина, Киев
+							p ул. Ярославская, 56
+						+e.list-soc-text.__list-text
+							p Мы в
+							p социальных сетях:
+						+e.list-soc.__list-text
+							-socList = ['fb', 'linkedin', 'twitter-pink']
+							each el in socList
+								+e.list-soc-icon-wrap
+									-socIconClass = '_default __list-soc-icon'
+									-socIcon = el
+									-socHref = true
+									include soc-icon
+
+				+e.bot
+					+e.bot-logo(href='#!')
+						+e.bot-logo-img(src='static/img/logo.svg' alt='image')
+					+e.bot-right
+						+e.NAV.bot-nav
+							ul
+								li: a(href='#advantage') Преимущества
+								li: a(href='#how') Как это работает
+								li: a(href='#loc') Сферы деятельности
+								li: a(href='#how') Как создаем
+								li: a(href='#example') Кейсы
+								//li: a(href='home.html') Блог
+								li: a(href='home.html') Контакты
+
+				+e.P.copy Copyright  2018 Unibot. All rights reserved.
+				+e.load
+					+e.load-link(href='#!') Условия использования
+					+e.load-link(href='#!') Политика конфиденциальности

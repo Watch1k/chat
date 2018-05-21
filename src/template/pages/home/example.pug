@@ -1,0 +1,66 @@
++b.SECTION.example#example(data-scroll-section)
+	+e.container.container
+		+e.H2.title Примеры работ
+
+		+e.slider-wrap
+			+e.slider-counter
+				+e.slider-counter-current
+				+e.slider-counter-total
+			+e.slider-btn
+				-btnClass = '_default js-modal'
+				-btnText = 'Заказать себе бот'
+				-
+					attributes = {
+						'data-target': '#orderBot'
+					}
+				include ../../components/btn
+			+e.slider
+				+e.slider-item
+					+e.slider-row
+						+e.slider-left
+							+e.slider-image
+								+e.IMG.slider-img(src='static/img/content/loc-slider-1.jpg' alt='image')
+								+e.SVG.slider-image-svg(viewBox='0 0 393 373.7' preserveAspectRatio='none')
+									path(d="M393,179.6v5.2C393,183.1,393,181.3,393,179.6z")
+									path(d="M333.6,340c-39.4,28.4-144.5,51.2-246,15C-17.4,317.5-13,184.3,23.3,120.5C59.7,56.3,50.1,0.2,113.6,0c63.8-0.2,87.8,16.4,186.5,8.9c57.2-4.3,92.4,82.6,93,170.7V0H0v373.7h393V184.8C392.7,247.9,374.3,310.7,333.6,340z")
+							+e.slider-chat
+								+e.P.slider-chat-text(data-text-mobile='Поговорить с этим ботом') Поговорить с ботом
+								+e.slider-chat-icon(href='#!' target='_blank')
+									+i('telegram')
+								+e.slider-chat-icon(href='#!' target='_blank')
+									+i('facebook')
+						+e.slider-right
+							+e.H3.slider-title Киевский зоопарк
+							+e.slider-text
+								p <strong>Задача:</strong> В связи с большим количеством простых запросов от клиентов, нужно было снизить нагрузку на колл центр заведения и упростить пользователю комуникацию по интересующим его вопросам.
+								p <strong>Результат:</strong> Разработан универсальный бот для месенджера Facebook, который сизил нагрузку на колл центр на 34% в течение первых 2 месяцев после запуска.
+
+				+e.slider-item
+					+e.slider-row
+						+e.slider-left
+							+e.slider-image
+								+e.IMG.slider-img(src='static/img/content/loc-slider-2.jpg' alt='image')
+								+e.SVG.slider-image-svg(viewBox='0 0 393 373.7' preserveAspectRatio='none')
+									path(d="M393,179.6v5.2C393,183.1,393,181.3,393,179.6z")
+									path(d="M333.6,340c-39.4,28.4-144.5,51.2-246,15C-17.4,317.5-13,184.3,23.3,120.5C59.7,56.3,50.1,0.2,113.6,0c63.8-0.2,87.8,16.4,186.5,8.9c57.2-4.3,92.4,82.6,93,170.7V0H0v373.7h393V184.8C392.7,247.9,374.3,310.7,333.6,340z")
+						+e.slider-right
+							+e.H3.slider-title Новостные агенства и популярные агенства
+							+e.P.slider-text CNN, Forbes, TechCrunch имеют своих чат-ботов.
+
+				+e.slider-item
+					+e.slider-row
+						+e.slider-left
+							+e.slider-image
+								+e.IMG.slider-img(src='static/img/content/loc-slider-3.jpg' alt='image')
+								+e.SVG.slider-image-svg(viewBox='0 0 393 373.7' preserveAspectRatio='none')
+									path(d="M393,179.6v5.2C393,183.1,393,181.3,393,179.6z")
+									path(d="M333.6,340c-39.4,28.4-144.5,51.2-246,15C-17.4,317.5-13,184.3,23.3,120.5C59.7,56.3,50.1,0.2,113.6,0c63.8-0.2,87.8,16.4,186.5,8.9c57.2-4.3,92.4,82.6,93,170.7V0H0v373.7h393V184.8C392.7,247.9,374.3,310.7,333.6,340z")
+							+e.slider-chat
+								+e.P.slider-chat-text(data-text-mobile='Поговорить с этим ботом') Поговорить с ботом
+								+e.slider-chat-icon(href='#!' target='_blank')
+									+i('telegram')
+								+e.slider-chat-icon(href='#!' target='_blank')
+									+i('facebook')
+						+e.slider-right
+							+e.H3.slider-title Новостные агенства будущего
+							+e.P.slider-text CNN, Forbes, TechCrunch имеют своих чат-ботов. Возможные сценарии: отправка новостей, подписка на новости, поиск новости по тегу.

@@ -1,0 +1,34 @@
++b.HEADER.header
+	+e.container.container
+		+e.logo(href='home.html')
+			+e.logo-img(src='static/img/logo.svg' alt='image')
+			+e.logo-img(src='static/img/logo-dark.svg' alt='image')
+		+e.right
+			+e.NAV.nav
+				ul
+					li: a(href='#advantage') Преимущества
+					li: a(href='#how') Как это работает
+					li: a(href='#loc') Сферы деятельности
+					li: a(href='#how') Как создаем
+					li: a(href='#example') Кейсы
+					//li: a(href='home.html') Блог
+					li: a(href='home.html') Контакты
+
+			+e.chat(href='#!' target='_blank')
+				+e.chat-icon
+					+i('facebook')
+
+			+e.lang
+				ul
+					li
+						a(href='#!') RU
+						ul
+							li: a(href='#!') EN
+							li: a(href='#!') UA
+
+			+e.menu-btn
+				+i('menu-open')
+				+i('menu-close')
+
+			+e.mobile-chat-btn
+				a(href='#!') ЧАТ С БОТОМ

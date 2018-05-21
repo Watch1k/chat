@@ -1,0 +1,70 @@
+.comments
+	margin: 50px auto 0
+	max-width: 480px
+	
+.comment
+	position: relative
+	padding-top: 30px
+	display: flex
+	flex-direction: column
+	&:not(:first-child)
+		margin-top: 50px
+	
+	&__title
+		font-size: 30px
+		text-transform: none
+		order: 1
+		padding: 0 100px 0 20px
+		border: 1px solid black
+		border-radius: 10px
+		opacity: 0
+		visibility: hidden
+		+trs
+		&.is-edit
+			border-color: green
+			box-shadow: 0 0 5px 2px green
+		
+	&__text
+		margin-top: 20px
+		order: 2
+		border: 1px solid black
+		border-radius: 20px
+		padding: 10px 20px
+		opacity: 0
+		visibility: hidden
+		+trs
+		&.is-edit
+			border-color: green
+			box-shadow: 0 0 5px 2px green
+		
+	&__time
+		position: absolute
+		right: 20px
+		top: 50px
+		opacity: 0
+		visibility: hidden
+		
+	&__edit
+		position: absolute
+		top: 0
+		right: 89px
+		font-size: 11px
+		text-transform: uppercase
+		opacity: 0
+		visibility: hidden
+		border-radius: 5px
+		+trs
+		&.is-active
+			background-color: green
+			color: #fff
+		
+	&__remove
+		position: absolute
+		top: 0
+		right: 10px
+		font-size: 11px
+		text-transform: uppercase
+		opacity: 0
+		visibility: hidden
+		border-radius: 5px
+		

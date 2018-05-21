@@ -1,0 +1,156 @@
++b.SECTION.how#how(data-scroll-section)
+	+b.chat.__chat#chat
+		+e.container.container
+			+e.icon-bot
+				img(src='static/img/bot.svg' alt='image')
+			+e.close-btn
+				+e.close-icon
+					+i('close')
+					+i('menu-close')
+			+e.content
+				+e.content-chat
+				+e.content-controls
+
+		// settings
+		+e.data-bot-msg.is-hidden
+			+e.content-chat-bot
+				+e.content-chat-bot-inner
+					+e.content-chat-bot-dot
+					+e.content-chat-bot-dot
+					+e.content-chat-bot-dot
+			+e.content-chat-human
+				+e.content-chat-human-inner
+			+e.content-controls-btn-wrap
+				-btnClass = '_default __content-controls-btn'
+				-btnText = ''
+				include ../../components/btn
+			+e.FORM.content-controls-form(action='#' novalidate)
+				.form-group
+					+e.INPUT.content-controls-form-input(type='email' placeholder='Введите ваш e-mail')
+					+e.BUTTON.content-controls-form-submit(type='submit')
+						+i('submit')
+
+		+e.data.is-hidden
+			+e.data-bot
+				div(data-bot='0')
+					p Привет, Человек!
+					p Меня зовут <a href='home.html'>Unibot</a> и я тот, кто больше расскажет тебе о крутых возможностях чатботов!
+					p Ну, что ж, начнем с простого. Как дела?
+				div(data-bot='1')
+					p Текст бота №1
+				div(data-bot='2')
+					p Текст бота №2
+					p Текст бота №2 еще разок
+				div(data-bot='last')
+					p Ну что ты начинаешь, оставь свой e-mail. Я еду с вином.
+				div(data-bot='submit')
+					p Спасибо, заявка принята на указанную почту:
+				div(data-bot='rejected')
+					p Это не почта, бро!
+				div(data-bot='stop')
+					p lol stop it please
+			+e.data-btn
+				div(data-btn='rejected')
+					p(data-btn-event-target='stop') Начало
+					p(data-btn-event-target='last') Почту
+				div(data-btn='0')
+					p(data-btn-event-target='1') Лучше не бывает!
+					p(data-btn-event-target='2') Бывало и лучше ...
+					p(data-btn-event-target='last') Mail
+				div(data-btn='1')
+					p(data-btn-event-target='1') Кнопка №1 с немалым количеством текста
+					p(data-btn-event-target='2') Кнопка №2 средняя
+					p(data-btn-event-target='last') Почту
+				div(data-btn='2')
+					p(data-btn-event-target='0') Начало
+					p(data-btn-event-target='2') Конец
+					p(data-btn-event-target='last') Почту
+
+	+e.gradient
+		+e.gradient-el
+		+e.gradient-el
+		+e.gradient-el
+
+	+e.round-bottom
+		.
+			<svg viewBox="0 0 1282 81">
+				<path d="M0,81h641.4C320.9,81,0,0,0,0V81z"/>
+				<path d="M1282,0c0,0-319.6,81-639.6,81H1282v-81H1282z"/>
+			</svg>
+
+	svg.is-hidden
+		path#path-how-1(d='M69.005,75.918 C139.703,30.693 249.171,-46.600 345.529,37.443 C441.887,121.484 490.431,200.368 418.726,261.891 C347.022,323.412 158.055,381.676 60.871,287.542 C-36.312,193.401 -1.694,121.143 69.005,75.918 Z')
+		path#path-how-2(d='M0.588,207.597 C-9.308,66.038 112.951,9.894 230.659,1.316 C348.367,-7.258 381.256,127.830 395.583,213.821 C409.910,299.812 326.068,315.336 209.426,364.212 C85.675,416.067 5.806,282.272 0.588,207.597 Z')
+		path#path-how-3(d='M410.350,223.687 C370.485,291.710 312.406,404.086 184.810,355.603 C57.209,307.123 -25.449,247.280 7.115,163.116 C39.674,78.951 177.722,-42.183 311.128,15.800 C444.539,73.783 450.220,155.664 410.350,223.687 Z')
+		path#path-how-4(d='M402.712,141.186 C399.770,211.571 402.080,325.228 260.569,327.526 C119.058,329.819 13.275,307.490 1.480,226.041 C-10.314,144.591 56.643,-3.299 208.217,0.413 C359.790,4.126 405.654,70.799 402.712,141.186 Z')
+		path#path-how-5(d='M417.330,185.645 C403.089,298.233 292.018,389.774 163.208,386.925 C39.261,384.185 12.136,246.594 1.805,155.998 C-8.526,65.402 80.277,53.743 205.314,9.039 C337.970,-38.390 426.531,112.901 417.330,185.645 Z')
+		path#path-how-6(d='M57.080,106.431 C143.768,78.887 167.116,-9.028 299.453,0.756 C442.448,11.325 454.420,172.418 427.577,247.408 C388.906,355.439 196.964,394.817 86.711,321.656 C-23.544,248.488 -23.202,131.941 57.080,106.431 Z')
+
+	+e.container.container
+		+e.H2.title Как это работает
+		+e.P.text Любая продажа строится на коммуникациях с клиентом, будь то знакомство с продуктом, представление новых функций или поддержка. Мы выводим процесс коммуникаций с клиентом инновационный уровень, разрабатвая боты под популярные/следующие платформы:
+
+		+e.soc
+			-socList = ['facebook', 'telegram', 'viber', 'skype', 'slack', 'insta']
+			each el in socList
+				+e.soc-icon-wrap
+					-socIconClass = '_default __soc-icon'
+					-socIcon = el
+					-socHref = 'none'
+					include ../../components/soc-icon
+
+		+e.history
+			+e.history-start
+			+e.history-line
+				.
+					<svg viewBox="0 0 604 1923">
+						<path d="M305,2c0,0,0.2,56.3-1,76c-1.7,28.8-12,67.7-52,91c-55.7,32.4-128,35-128,35S-47.5,311.9,96,355s269.1-55.9,412,65c142.9,120.9-44.5,309.3-298,299c-251.8-10.2-258.9,186.4-69,240c119.5,33.8,145.3-32.7,273-24s176.5,114.7,185,174s-104.5,220.1-319,244s-264.5,157-127,209s294.9-56.2,349,87c41.8,110.7-8,273-8,273"/>
+					</svg>
+
+			+e.history-el_1
+				+e.history-canvas
+				+e.history-number
+					+i('01')
+				+e.history-content
+					+e.H3.history-title Идея бота
+					+e.P.history-text Определение направлений и функций, где бот будет полезен для ваших клиентов.
+
+			+e.history-el_2
+				+e.history-canvas
+				+e.history-number
+					+i('02')
+				+e.history-content
+					+e.H3.history-title Сценарий разработки
+					+e.P.history-text Определение направлений и функций, где бот будет полезен для ваших клиентов.
+
+			+e.history-el_3
+				+e.history-canvas
+				+e.history-number
+					+i('03')
+				+e.history-content
+					+e.H3.history-title Подключение модулей
+					+e.P.history-text Определение направлений и функций, где бот будет полезен для ваших клиентов.
+
+			+e.history-el_4
+				+e.history-canvas
+				+e.history-number
+					+i('04')
+				+e.history-content
+					+e.H3.history-title Тестирование
+					+e.P.history-text Определение направлений и функций, где бот будет полезен для ваших клиентов.
+
+			+e.history-el_5
+				+e.history-canvas
+				+e.history-number
+					+i('05')
+				+e.history-content
+					+e.H3.history-title Публикация бота на странице Facebook
+					+e.P.history-text Определение направлений и функций, где бот будет полезен для ваших клиентов.
+
+			+e.history-el_6
+				+e.history-canvas
+				+e.history-number
+					+i('06')
+				+e.history-content
+					+e.H3.history-title Профит
+					+e.P.history-text Определение направлений и функций, где бот будет полезен для ваших клиентов.

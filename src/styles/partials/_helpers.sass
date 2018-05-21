@@ -1,0 +1,299 @@
+/* ===================================
+	 MEDIA
+	 =================================== */
+=mac
+	+r($mac)
+		@content
+
+=desk
+	+rmin($minDesk)
+		@content
+
+=tab
+	+rmin($minTab)
+		@content
+
+=md
+	+r($tab)
+		@content
+
+=only-tab
+	@media only screen and (max-width: $tab + 'px') and (min-width: $minTab + 'px')
+		@content
+
+=tab-fix
+	@media only screen and (max-width: $tab + 'px') and (min-width: $minTab + 'px') and (orientation: landscape)
+		@content
+
+=tab-land
+	@media only screen and (max-width: $tab + 'px') and (orientation: landscape)
+		@content
+
+=sm
+	+r($mob)
+		@content
+	
+=sm-5
+	@media only screen and (max-width: 374px)
+		@content
+
+=mob-fix
+	@media only screen and (max-width: $mob + 'px') and (orientation: landscape)
+		@content
+
+=mob-portrait
+	@media only screen and (max-width: $mob + 'px') and (orientation: portrait)
+		@content
+		
+=portrait
+	@media only screen and (orientation: portrait)
+		@content
+	
+
+/* ===================================
+	 TRANSITION
+	 =================================== */
+=trs
+	transition: all 0.3s ease
+
+=trs-slow
+	transition: all 0.6s ease
+
+.transition-off
+	transition: none!important
+
+/* ===================================
+	 FONT
+	 =================================== */
+=h1
+	+f('Gilroy-ExtraBold',44,56,20)
+	text-transform: uppercase
+	+sm
+		font-size: 22px
+		line-height: 28px
+		letter-spacing: 0.04em
+h1
+	+h1
+	
+=h2
+	+f('Gilroy-Bold',35,36,0)
+	+sm
+		font-size: 26px
+		line-height: 27px
+h2
+	+h2
+	
+=h3
+	+f('Gilroy-Bold',26,30,0)
+	+sm
+		font-size: 20px
+		line-height: 24px
+h3
+	+h3
+	
+=h4
+	+f('Gilroy-Bold',20,30,0)
+	+sm
+		font-size: 16px
+h4
+	+h4
+
+=paragraph-text
+	+f('MullerRegular',18,24,0)
+	+sm
+		font-size: 13px
+		line-height: 20px
+	strong
+		+f('MullerMedium',18,24,0)
+		+sm
+			font-size: 14px
+			color: $color4
+			line-height: 20px
+	
+
+/* ===================================
+	 LINK
+	 =================================== */
+	
+	
+/* ===================================
+	 LINK TEXT
+	 =================================== */
+
+
+/* ===================================
+	 HELPERS
+	 =================================== */
+.is-hidden
+	display: none
+	
+/* Tiny Slider
+	----------------------------------- */
+.tns-controls
+	[data-controls='prev'],
+	[data-controls='next']
+		position: relative
+		padding: 0
+		width: 64px
+		background-color: transparent
+		border: none
+		border-radius: 0
+		height: 28px
+		display: flex
+		align-items: center
+		justify-content: space-between
+		div
+			width: 4px
+			height: 4px
+			border-radius: 50%
+			background-color: $color5
+			+trs
+			+md
+				background-color: $color4
+		span
+			position: absolute
+			z-index: 2
+			top: 0
+			width: 28px
+			height: 28px
+			border-radius: 50%
+			border: 2px solid $color5
+			+trs
+			+md
+				top: 9px
+	[data-controls='prev']
+		+md
+			padding-left: 20px
+			padding-right: 10px
+		span
+			left: 0
+			+md
+				left: 9px
+				+arr(5,10,$color4,l)
+				border-radius: 0
+		div:nth-child(4) ~ div
+			+md
+				display: none
+	[data-controls='next']
+		+md
+			padding-left: 10px
+			padding-right: 20px
+		span
+			right: 0
+			+md
+				right: 9px
+				+arr(5,10,$color4,r)
+				border-radius: 0
+		div:nth-child(4) ~ div
+			+md
+				display: none
+	[data-controls='prev']
+		.no-touch &:hover
+			div
+				background-color: $color8
+			span
+				transform: translateX(18px)
+				border-color: $color8
+	[data-controls='next']
+		.no-touch &:hover
+			div
+				background-color: $color8
+			span
+				transform: translateX(-18px)
+				border-color: $color8
+				
+/* ===================================
+	 article
+	 =================================== */
+.article
+	> * + *
+		margin-top: 32px
+		+md
+			margin-top: 27px
+		+sm
+			margin-top: 20px
+	> ol + *,
+	> ul + *,
+	> * + ul,
+	> * + ol
+		margin-top: 16px
+		+sm
+			margin-top: 12px
+	> * + img
+		margin-top: 35px
+		+sm
+			margin-top: 25px
+	> img + *
+		margin-top: 30px
+		+sm
+			margin-top: 20px
+	> * + h2,
+	> * + h3
+		margin-top: 65px!important
+		+md
+			margin-top: 55px!important
+	blockquote
+		position: relative
+		margin-top: 47px
+		margin-bottom: 0
+		padding-left: 100px
+		max-width: 960px
+		font-family: 'MullerRegularItalic', Arial, sans-serif
+		+sm
+			padding-left: 40px
+		&:before
+			content: ''
+			position: absolute
+			top: 6px
+			left: 40px
+			bottom: 0
+			width: 4px
+			background: transparent url('../img/list-decor.svg') center top repeat-y
+			+sm
+				left: 0
+		+md
+			margin-top: 37px
+		+sm
+			margin-top: 27px
+	blockquote + *
+		margin-top: 47px
+		+md
+			margin-top: 37px
+		+sm
+			margin-top: 27px
+	
+	p
+		+ p
+			margin-top: 32px
+			+md
+				margin-top: 27px
+			+sm
+				margin-top: 20px
+	
+	b,
+	strong
+		font-family: 'MullerBold', Arial, sans-serif
+		color: $color4
+		font-weight: normal
+		
+	a
+		font-family: 'MullerBold', Arial, sans-serif
+		color: $color4
+		text-decoration: underline
+		+trs
+		.no-touch &:hover
+			color: $color2
+			
+	+ul-list
+	+ol-list
+	
+	&__image
+		position: relative
+		display: table
+		width: 626px
+		+sm
+			width: 100%
+			max-width: 100%
+		img
+			width: 100%
+			max-width: 100%
